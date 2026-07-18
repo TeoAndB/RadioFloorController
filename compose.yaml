@@ -1,0 +1,7 @@
+﻿services:
+  radiofloorcontroller:
+    image: radiofloorcontroller
+    build:
+      context: .
+      dockerfile: Dockerfile
+

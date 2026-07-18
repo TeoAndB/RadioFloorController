@@ -1,0 +1,6 @@
+@RadioFloorController_HostAddress = http://localhost:5272
+
+GET {{RadioFloorController_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
