@@ -1,6 +1,16 @@
 @RadioFloorController_HostAddress = http://localhost:8080
+@groupId = group1
+@userId = user1
 
-GET {{RadioFloorController_HostAddress}}/weatherforecast/
-Accept: application/json
+POST {{RadioFloorController_HostAddress}}/groups/{{groupId}}/floor
+Content-Type: application/json
+
+{
+  "userId": "{{userId}}"
+}
+
+###
+
+DELETE {{RadioFloorController_HostAddress}}/groups/{{groupId}}/floor/{{userId}}
 
 ###

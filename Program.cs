@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RadioFloorController.Data;
 using RadioFloorController.Domain;
 using RadioFloorController.Services;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +28,7 @@ using (var scope = app.Services.CreateScope())
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 var groups = app.MapGroup("/groups");

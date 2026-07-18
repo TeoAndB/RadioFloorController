@@ -9,10 +9,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4a86b02e-0750-4478-9f65-3bb202dad99e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RadioFloorController.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RadioFloorController.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadioFloorController.http" beforeDir="false" afterPath="$PROJECT_DIR$/RadioFloorController.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +37,11 @@
     &quot;accountId&quot;: &quot;312f367c-477e-4dc6-9954-10eead677a89&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.config/dotnet-tools.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -140,7 +144,7 @@
       <updated>1784356183143</updated>
       <workItem from="1784356185037" duration="314000" />
       <workItem from="1784356538367" duration="2741000" />
-      <workItem from="1784359367716" duration="2899000" />
+      <workItem from="1784359367716" duration="4778000" />
     </task>
     <task id="LOCAL-00001" summary="project foundation with docker and API">
       <option name="closed" value="true" />
@@ -198,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784361071679</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added domain and data logic">
+      <option name="closed" value="true" />
+      <created>1784363580621</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1784363580621</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +238,8 @@
     <MESSAGE value="git conf" />
     <MESSAGE value="changed host address and app uri" />
     <MESSAGE value="added agents" />
-    <option name="LAST_COMMIT_MESSAGE" value="added agents" />
+    <MESSAGE value="added domain and data logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="added domain and data logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
