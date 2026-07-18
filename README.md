@@ -2,6 +2,9 @@
 
 `docker-compose up -d --build
 `
+Check that you have two containers running. One for the app and one for a simple Postgres DB (yes I chose a persistence layer)
+
+![img.png](.\Documentation\docker-containers.png)
 
 2. Go to:
 
@@ -9,7 +12,7 @@ http://localhost:8080/scalar/v1
 
 in order to test endpoints using Scalar UI integration.
 
-## Endpoint Testing
+## Endpoint Testing in Scalar
 
 ### POST /groups/{groupId}/floor
 
@@ -36,6 +39,8 @@ To test for 409 Conflict, try access the floor with a user from a different grou
 
 ![alt text](.\Documentation\image-1.png)
 
+Connect to the DB container (port: 5432) Check the changes you make in the Postgres DB :)
+![alt text](.\Documentation\image-db.png)
 ### Explanation:
 The two IDs are independent — there's no built-in pairing between "group2" and "user2". Think of it like a radio channel:
 
