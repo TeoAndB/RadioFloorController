@@ -1,15 +1,15 @@
-Run 
+1. Run
 
 `docker-compose up -d --build
 `
 
-Go to:
+2. Go to:
 
 http://localhost:8080/scalar/v1
 
 in order to test endpoints using Scalar UI integration.
 
-## Endpoints
+## Endpoint Testing
 
 ### POST /groups/{groupId}/floor
 
@@ -27,7 +27,24 @@ Content-Type: application/json
 }
 ```
 
-![post-testing](image.png)
+To test for 200 OK response, try access the floor by user from group1.
+
+
+![post-testing](.\Documentation\image.png)
+
+To test for 409 Conflict, try access the floor with a user from a different group. (group1, user2).
+
+![alt text](.\Documentation\image-1.png)
+
+### Explanation:
+The two IDs are independent — there's no built-in pairing between "group2" and "user2". Think of it like a radio channel:
+
+- groupId = which radio channel/talkgroup (e.g. group1, dispatch, channel-3)
+- userId = which person is talking
+
+When you sent groupId=group2, userId=user2, that was a request for group2's floor — which had never been requested before, so there was no holder yet -> naturally Obtained. Nothing to conflict with.
+
+To actually reproduce a conflict, both requests must target the exact same groupId, with two different userIds, and the second one must arrive before the first user releases (or before any timeout, if that's implemented).
 
 ### DELETE /groups/{groupId}/floor/{userId}
 
