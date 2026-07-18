@@ -9,6 +9,11 @@
   <component name="ChangeListManager">
     <list default="true" id="4a86b02e-0750-4478-9f65-3bb202dad99e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadioFloorController.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RadioFloorController.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +140,7 @@
       <updated>1784356183143</updated>
       <workItem from="1784356185037" duration="314000" />
       <workItem from="1784356538367" duration="2741000" />
-      <workItem from="1784359367716" duration="1584000" />
+      <workItem from="1784359367716" duration="2899000" />
     </task>
     <task id="LOCAL-00001" summary="project foundation with docker and API">
       <option name="closed" value="true" />
@@ -185,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784358939480</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added agents">
+      <option name="closed" value="true" />
+      <created>1784361071679</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1784361071679</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +225,8 @@
     <MESSAGE value="git configs" />
     <MESSAGE value="git conf" />
     <MESSAGE value="changed host address and app uri" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed host address and app uri" />
+    <MESSAGE value="added agents" />
+    <option name="LAST_COMMIT_MESSAGE" value="added agents" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
