@@ -52,7 +52,9 @@ groups.MapPost("/{groupId}/floor", async Task<Results<Ok<MessageResponse>, BadRe
             _ => throw new InvalidOperationException($"Unhandled {nameof(FloorObtainResult)} subtype: {result.GetType()}"),
         };
     })
-    .WithName("ObtainFloor");
+    .WithName("ObtainFloor")
+    .WithSummary("Obtain the Floor (Push to Talk)")
+    .WithDescription("Allows a user to request and obtain the \"floor\" for a specified radio group. Only one user can hold the floor at a time.");
 
 groups.MapDelete("/{groupId}/floor/{userId}", async Task<Results<Ok<MessageResponse>, JsonHttpResult<MessageResponse>>> (
         string groupId, string userId, IFloorControlService floorControlService, CancellationToken ct) =>
@@ -68,7 +70,9 @@ groups.MapDelete("/{groupId}/floor/{userId}", async Task<Results<Ok<MessageRespo
             _ => throw new InvalidOperationException($"Unhandled {nameof(FloorReleaseResult)} subtype: {result.GetType()}"),
         };
     })
-    .WithName("ReleaseFloor");
+    .WithName("ReleaseFloor")
+    .WithSummary("Release the Floor")
+    .WithDescription("Allows a user to release the floor they are holding for a specified group.");
 
 app.Run();
 
