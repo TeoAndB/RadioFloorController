@@ -16,6 +16,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "TeoAndB"
+  }
+}]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="312f367c-477e-4dc6-9954-10eead677a89" />
   </component>
@@ -113,6 +119,9 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\AndreeaTeodoraBejena\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4a86b02e-0750-4478-9f65-3bb202dad99e" name="Changes" comment="" />
@@ -121,7 +130,7 @@
       <option name="presentableId" value="Default" />
       <updated>1784356183143</updated>
       <workItem from="1784356185037" duration="314000" />
-      <workItem from="1784356538367" duration="670000" />
+      <workItem from="1784356538367" duration="1015000" />
     </task>
     <task id="LOCAL-00001" summary="project foundation with docker and API">
       <option name="closed" value="true" />
@@ -147,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784356921620</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="git configs">
+      <option name="closed" value="true" />
+      <created>1784357254368</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1784357254368</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +188,8 @@
     <MESSAGE value="project foundation with docker and API" />
     <MESSAGE value="test commit" />
     <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="git configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="git configs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
