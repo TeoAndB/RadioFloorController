@@ -6,7 +6,7 @@ namespace RadioFloorController.Tests;
 /// <summary>
 /// Verifies the <see cref="FloorControlOptions"/> defaults and configuration binding behavior
 /// documented on the type — i.e. the same "FloorControl" section binding path that
-/// <c>Program.cs</c> wires up via <c>services.Configure&lt;FloorControlOptions&gt;(...)</c>.
+/// <c>Program.cs</c> wires up via <c>services.Configure&lt;FloorControlOptions&gt;</c>.
 /// </summary>
 public class FloorControlOptionsTests
 {
