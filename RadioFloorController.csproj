@@ -17,4 +17,18 @@
         <PackageReference Include="Scalar.AspNetCore" Version="2.16.15" />
     </ItemGroup>
 
+    <!--
+        The RadioFloorController.Tests project lives in a subfolder of this project's directory.
+        The SDK's default item globs are project-directory-relative and only exclude *this*
+        project's own bin/obj, not a nested project's — without these excludes, the test
+        project's sources (and its own obj/ generated files) would be compiled twice, once by
+        each project.
+    -->
+    <ItemGroup>
+        <Compile Remove="RadioFloorController.Tests/**/*.cs" />
+        <Content Remove="RadioFloorController.Tests/**/*" />
+        <EmbeddedResource Remove="RadioFloorController.Tests/**/*" />
+        <None Remove="RadioFloorController.Tests/**/*" />
+    </ItemGroup>
+
 </Project>

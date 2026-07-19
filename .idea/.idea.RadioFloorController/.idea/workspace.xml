@@ -9,12 +9,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4a86b02e-0750-4478-9f65-3bb202dad99e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/FloorGrantEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/FloorGrantEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/FloorReleaseResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/FloorReleaseResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/FloorControlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/FloorControlService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/IFloorControlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IFloorControlService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadioFloorController.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RadioFloorController.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RadioFloorController.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RadioFloorController.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +37,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.config/dotnet-tools.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Data/AppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Data/FloorGrantEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Data/Migrations/AppDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Data/Migrations/AppDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
@@ -156,7 +153,7 @@
       <workItem from="1784356538367" duration="2741000" />
       <workItem from="1784359367716" duration="8972000" />
       <workItem from="1784371660802" duration="226000" />
-      <workItem from="1784474399367" duration="4088000" />
+      <workItem from="1784474399367" duration="5895000" />
     </task>
     <task id="LOCAL-00001" summary="project foundation with docker and API">
       <option name="closed" value="true" />
@@ -270,7 +267,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784484017700</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added floor timeout and list floor holders">
+      <option name="closed" value="true" />
+      <created>1784484264946</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1784484264946</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +288,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -305,7 +322,8 @@
     <MESSAGE value="database access using DBeaver. Added image for running containers" />
     <MESSAGE value="updated doc" />
     <MESSAGE value="removed unused" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed unused" />
+    <MESSAGE value="added floor timeout and list floor holders" />
+    <option name="LAST_COMMIT_MESSAGE" value="added floor timeout and list floor holders" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
