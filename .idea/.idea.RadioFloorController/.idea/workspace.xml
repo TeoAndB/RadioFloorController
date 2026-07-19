@@ -7,7 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a86b02e-0750-4478-9f65-3bb202dad99e" name="Changes" comment="" />
+    <list default="true" id="4a86b02e-0750-4478-9f65-3bb202dad99e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +37,11 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.config/dotnet-tools.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/FloorObtainResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
@@ -140,7 +149,9 @@
       <updated>1784356183143</updated>
       <workItem from="1784356185037" duration="314000" />
       <workItem from="1784356538367" duration="2741000" />
-      <workItem from="1784359367716" duration="7103000" />
+      <workItem from="1784359367716" duration="8972000" />
+      <workItem from="1784371660802" duration="226000" />
+      <workItem from="1784474399367" duration="1602000" />
     </task>
     <task id="LOCAL-00001" summary="project foundation with docker and API">
       <option name="closed" value="true" />
@@ -222,7 +233,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784368098190</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="updated readme and moved imgs in doc">
+      <option name="closed" value="true" />
+      <created>1784368723601</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1784368723601</updated>
+    </task>
+    <task id="LOCAL-00012" summary="database access using DBeaver. Added image for running containers">
+      <option name="closed" value="true" />
+      <created>1784370236577</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1784370236577</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +280,9 @@
     <MESSAGE value="added domain and data logic" />
     <MESSAGE value="addes scalar.aspnetcore for endpoint testing. Added port for db in container. Added ASPNETCORE_ENVIRONMENT: Development to run container in development and use configs from there" />
     <MESSAGE value="added docs. Added readmi for endpoint testing (POST)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added docs. Added readmi for endpoint testing (POST)" />
+    <MESSAGE value="updated readme and moved imgs in doc" />
+    <MESSAGE value="database access using DBeaver. Added image for running containers" />
+    <option name="LAST_COMMIT_MESSAGE" value="database access using DBeaver. Added image for running containers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

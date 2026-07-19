@@ -39,7 +39,7 @@ To test for 409 Conflict, try access the floor with a user from a different grou
 
 ![alt text](.\Documentation\image-1.png)
 
-Connect to the DB container (port: 5432) Check the changes you make in the Postgres DB :)
+Connect to the DB container (port: 5432) (use DBeaver as GUI). Check the changes you make in the Postgres DB :)
 ![alt text](.\Documentation\image-db.png)
 ### Explanation:
 The two IDs are independent — there's no built-in pairing between "group2" and "user2". Think of it like a radio channel:
