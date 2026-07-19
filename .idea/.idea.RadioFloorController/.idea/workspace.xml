@@ -9,8 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="4a86b02e-0750-4478-9f65-3bb202dad99e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RadioFloorController/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/FloorGrantEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/FloorGrantEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/FloorReleaseResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/FloorReleaseResult.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/FloorControlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/FloorControlService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/IFloorControlService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/IFloorControlService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +41,16 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.config/dotnet-tools.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Data/FloorGrantEntity.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Data/Migrations/AppDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Data/Migrations/AppDbContextModelSnapshot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/FloorObtainResult.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Domain/FloorReleaseResult.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Work/RadioFloorController/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Services/FloorControlService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Work/RadioFloorController/Services/IFloorControlService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -151,7 +156,7 @@
       <workItem from="1784356538367" duration="2741000" />
       <workItem from="1784359367716" duration="8972000" />
       <workItem from="1784371660802" duration="226000" />
-      <workItem from="1784474399367" duration="1602000" />
+      <workItem from="1784474399367" duration="4088000" />
     </task>
     <task id="LOCAL-00001" summary="project foundation with docker and API">
       <option name="closed" value="true" />
@@ -249,7 +254,23 @@
       <option name="project" value="LOCAL" />
       <updated>1784370236577</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="updated doc">
+      <option name="closed" value="true" />
+      <created>1784481060394</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1784481060395</updated>
+    </task>
+    <task id="LOCAL-00014" summary="removed unused">
+      <option name="closed" value="true" />
+      <created>1784484017700</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1784484017700</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +303,9 @@
     <MESSAGE value="added docs. Added readmi for endpoint testing (POST)" />
     <MESSAGE value="updated readme and moved imgs in doc" />
     <MESSAGE value="database access using DBeaver. Added image for running containers" />
-    <option name="LAST_COMMIT_MESSAGE" value="database access using DBeaver. Added image for running containers" />
+    <MESSAGE value="updated doc" />
+    <MESSAGE value="removed unused" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed unused" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

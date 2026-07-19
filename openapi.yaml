@@ -1,0 +1,171 @@
+openapi: 3.0.0
+info:
+  title: Floor Control API
+  description: An API for managing a "floor" in a push-to-talk radio group system.
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+    description: Local dev server
+
+paths:
+  /groups/{groupId}/floor:
+    get:
+      summary: Get the Current Floor Holder
+      description: Retrieves the user who currently holds the floor for a group, if any.
+      operationId: getCurrentFloorHolder
+      tags:
+        - Floor Control
+      parameters:
+        - name: groupId
+          in: path
+          description: The ID of the group for which to retrieve the current floor holder.
+          required: true
+          schema:
+            type: string
+            example: "group-alpha-123"
+      responses:
+        '200':
+          description: The floor is currently held; returns the current holder.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FloorHolderResponse'
+        '404':
+          description: No user currently holds the floor for this group.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                message: "No user currently holds the floor for group group-alpha-123"
+    post:
+      summary: Obtain the Floor (Push to Talk)
+      description: Allows a user to request and obtain the "floor" for a specified radio group. Only one user can hold the floor at a time.
+      operationId: obtainFloor
+      tags:
+        - Floor Control
+      parameters:
+        - name: groupId
+          in: path
+          description: The ID of the group for which to obtain the floor.
+          required: true
+          schema:
+            type: string
+            example: "group-alpha-123"
+      requestBody:
+        description: User ID requesting the floor.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserRequest'
+      responses:
+        '200':
+          description: Successfully obtained the floor.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Floor obtained by user-456 for group group-alpha-123"
+        '400':
+          description: Bad Request - Missing or invalid userId.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+              example:
+                message: "Invalid request: userId is required"
+        '409':
+          description: Conflict - Floor is currently held by another user.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Floor is currently held by user-789 for group group-alpha-123"
+
+  /groups/{groupId}/floor/{userId}:
+    delete:
+      summary: Release the Floor
+      description: Allows a user to release the floor they are holding for a specified group.
+      operationId: releaseFloor
+      tags:
+        - Floor Control
+      parameters:
+        - name: groupId
+          in: path
+          description: The ID of the group for which to release the floor.
+          required: true
+          schema:
+            type: string
+            example: "group-alpha-123"
+        - name: userId
+          in: path
+          description: The ID of the user releasing the floor.
+          required: true
+          schema:
+            type: string
+            example: "user-456"
+      responses:
+        '200':
+          description: Successfully released the floor.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mesage:
+                    type: string
+                    example: "Floor released by user-456 for group group-alpha-123"
+        '403':
+          description: Forbidden - The requesting user does not hold the floor.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "User user-456 does not hold the floor for group group-alpha-123"
+
+components:
+  schemas:
+    UserRequest:
+      type: object
+      required:
+        - userId
+      properties:
+        userId:
+          type: string
+          description: The unique identifier for the user.
+          example: "user-456"
+    ErrorResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: A human-readable error message.
+    FloorHolderResponse:
+      type: object
+      required:
+        - holderUserId
+        - obtainedAt
+        - expiresAt
+      properties:
+        holderUserId:
+          type: string
+          description: The user id of the current holder.
+          example: "user-456"
+        obtainedAt:
+          type: string
+          format: date-time
+          description: When the current holder obtained the floor.
+        expiresAt:
+          type: string
+          format: date-time
+          description: The deadline at which this hold auto-expires unless released or renewed first.

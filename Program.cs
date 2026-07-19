@@ -33,6 +33,8 @@ var connectionString = builder.Configuration.GetConnectionString("Default")
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddScoped<IFloorControlService, FloorControlService>();
+builder.Services.Configure<FloorControlOptions>(builder.Configuration.GetSection(FloorControlOptions.SectionName));
+builder.Services.AddHostedService<FloorTimeoutSweepService>();
 
 var app = builder.Build();
 
@@ -85,7 +87,7 @@ groups.MapDelete("/{groupId}/floor/{userId}", async Task<Results<Ok<MessageRespo
         {
             FloorReleaseResult.Released => TypedResults.Ok(
                 new MessageResponse($"Floor released by {userId} for group {groupId}")),
-            FloorReleaseResult.NotHolder => TypedResults.Json(
+            FloorReleaseResult.TimedOut or FloorReleaseResult.NotHolder => TypedResults.Json(
                 new MessageResponse($"User {userId} does not hold the floor for group {groupId}"),
                 statusCode: StatusCodes.Status403Forbidden),
             _ => throw new InvalidOperationException($"Unhandled {nameof(FloorReleaseResult)} subtype: {result.GetType()}"),
@@ -95,8 +97,30 @@ groups.MapDelete("/{groupId}/floor/{userId}", async Task<Results<Ok<MessageRespo
     .WithSummary("Release the Floor")
     .WithDescription("Allows a user to release the floor they are holding for a specified group.");
 
+groups.MapGet("/{groupId}/floor", async Task<Results<Ok<FloorHolderResponse>, NotFound<MessageResponse>>> (
+        string groupId, IFloorControlService floorControlService, CancellationToken ct) =>
+    {
+        var result = await floorControlService.GetCurrentHolderAsync(groupId, ct);
+        return result switch
+        {
+            FloorHolderResult.Held(var holderUserId, var obtainedAt, var expiresAt) => TypedResults.Ok(
+                new FloorHolderResponse(holderUserId, obtainedAt, expiresAt)),
+            FloorHolderResult.NotHeld => TypedResults.NotFound(
+                new MessageResponse($"No user currently holds the floor for group {groupId}")),
+            _ => throw new InvalidOperationException($"Unhandled {nameof(FloorHolderResult)} subtype: {result.GetType()}"),
+        };
+    })
+    .WithName("GetCurrentFloorHolder")
+    .WithTags("Floor Control")
+    .WithSummary("Get the Current Floor Holder")
+    .WithDescription("Retrieves the user who currently holds the floor for a group, if any.")
+    .Produces<FloorHolderResponse>(StatusCodes.Status200OK, "application/json")
+    .Produces<MessageResponse>(StatusCodes.Status404NotFound, "application/json");
+
 app.Run();
 
 record MessageResponse(string Message);
 
 record UserRequest(string? UserId);
+
+record FloorHolderResponse(string HolderUserId, DateTimeOffset ObtainedAt, DateTimeOffset ExpiresAt);
