@@ -1,4 +1,6 @@
 A simple REST API in .NET (C#) that allows certain users to be exclusively part of certain groups. Capabilities:
+- add group to a user
+- remove user from group
 - group timeout: the group held by a user is automatically released after a certain time
 - list users for belonging to a group
 - CI pipeline running automated tests
