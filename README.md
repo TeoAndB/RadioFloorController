@@ -1,9 +1,10 @@
-A simple REST API in .NET (C#) mimicking a radio station: it allows certain users to be exclusively part of certain groups (radio floors). Capabilities:
+A simple REST API in .NET (C#) mimicking a radio station: it allows certain users to be exclusively part of certain groups (radio floors). Built using agentic AI. Capabilities:
 - add group to a user
 - remove user from group
 - group timeout: the group held by a user is automatically released after a certain time
 - list users for belonging to a group
 - CI pipeline running automated tests
+- claude.md agents
 
 1. Run
 
