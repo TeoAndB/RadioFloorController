@@ -1,3 +1,8 @@
+A simple REST API in .NET (C#) that allows certain users to be exclusively part of certain groups. Capabilities:
+- group timeout: the group held by a user is automatically released after a certain time
+- list users for belonging to a group
+- CI pipeline running automated tests
+
 1. Run
 
 `docker-compose up -d --build
