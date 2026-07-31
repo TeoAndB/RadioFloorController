@@ -4,7 +4,7 @@
 `
 Check that you have two containers running. One for the app and one for a simple Postgres DB (yes I chose a persistence layer)
 
-![img.png](.\Documentation\docker-containers.png)
+![img.png](./Documentation/docker-containers.png)
 
 2. Go to:
 
