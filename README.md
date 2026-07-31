@@ -33,14 +33,14 @@ Content-Type: application/json
 To test for 200 OK response, try access the floor by user from group1.
 
 
-![post-testing](.\Documentation\image.png)
+![post-testing](./Documentation/image.png)
 
 To test for 409 Conflict, try access the floor with a user from a different group. (group1, user2).
 
-![alt text](.\Documentation\image-1.png)
+![alt text](./Documentation/image-1.png)
 
 Connect to the DB container (port: 5432) (use DBeaver as GUI). Check the changes you make in the Postgres DB :)
-![alt text](.\Documentation\image-db.png)
+![alt text](./Documentation/image-db.png)
 ### Explanation:
 The two IDs are independent — there's no built-in pairing between "group2" and "user2". Think of it like a radio channel:
 
